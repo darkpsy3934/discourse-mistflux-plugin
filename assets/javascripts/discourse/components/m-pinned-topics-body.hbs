@@ -1,13 +1,13 @@
 {{#if this.pinnedTopics}}
     <tbody class="pinned-topics">
     {{#each this.pinnedTopics as |topic|}}
-        {{topic-list-item
-                topic=topic
-                bulkSelectEnabled=@bulkSelectEnabled
-                lastVisitedTopic=@lastVisitedTopic
-                selected=@selected
-                hideCategory=@hideCategory
-        }}
+        <topic-list-item
+                @topic={{topic}}
+                @bulkSelectEnabled={{@outletArgs.bulkSelectEnabled}}
+                @lastVisitedTopic={{@outletArgs.lastVisitedTopic}}
+                @selected={{@outletArgs.selected}}
+                @hideCategory={{@outletArgs.hideCategory}}
+        />
     {{/each}}
     <tr class="table-break">
         <td colspan="10">&nbsp;</td>
