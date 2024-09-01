@@ -1,7 +1,7 @@
 import Component from "@ember/component";
 import { tracked } from '@glimmer/tracking';
 
-export default class MyComponent extends Component {
+export default class MPinnedTopicsBody extends Component {
     @tracked topics;
 
     get pinnedTopics() {
