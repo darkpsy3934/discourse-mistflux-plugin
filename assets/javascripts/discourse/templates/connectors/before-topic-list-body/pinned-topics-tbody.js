@@ -1,4 +1,8 @@
-import { createTemplateFactory } from "@ember/template-factory";
-import layout from './pinned-topics-tbody.hbs'; // Import the template
+import { registerConnector } from 'discourse/lib/plugin-connectors';
 
-export default createTemplateFactory(layout);
+registerConnector('before-topic-list-body', 'pinned-topics-tbody', {
+    templateName: 'discourse/connectors/before-topic-list-body/pinned-topics-tbody',
+    shouldRender(args, container) {
+        return args.topics && args.topics.length > 0;
+    }
+});
