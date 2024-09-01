@@ -1,9 +1,17 @@
-{{#if this.discoveryList}}
-    <MPinnedTopicsBody
-            @topics={{this.topics}}
-            @bulkSelectEnabled={{this.bulkSelectEnabled}}
-            @lastVisitedTopic={{this.lastVisitedTopic}}
-            @selected={{this.selected}}
-            @hideCategory={{this.hideCategory}}
-    />
+{{#if this.pinnedTopics}}
+    <tbody class="pinned-topics">
+    {{#each this.pinnedTopics as |topic|}}
+        <TopicListItem
+                @topic={{topic}}
+                @bulkSelectEnabled={{@outletArgs.bulkSelectEnabled}}
+                @lastVisitedTopic={{@outletArgs.lastVisitedTopic}}
+                @selected={{@outletArgs.selected}}
+                @hideCategory={{@outletArgs.hideCategory}}
+                @showPosters={{true}}
+        />
+    {{/each}}
+    <tr class="table-break">
+        <td colspan="10">&nbsp;</td>
+    </tr>
+    </tbody>
 {{/if}}
