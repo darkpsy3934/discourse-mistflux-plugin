@@ -5,6 +5,7 @@ export default class MPinnedTopicsBody extends Component {
     @tracked topics;
 
     get pinnedTopics() {
-        return this.args.topics.filter(t => t.get("pinned"));
+        // Ensure this.args.topics is an array, or default to an empty array
+        return (this.args.topics || []).filter(t => t.get("pinned"));
     }
 }
