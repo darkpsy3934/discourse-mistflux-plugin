@@ -1,4 +1,0 @@
-plugins:
-  mistflux_franchise:
-    default: "mistflux"
-    client: true
