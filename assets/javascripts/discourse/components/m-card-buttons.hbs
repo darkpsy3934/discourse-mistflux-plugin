@@ -1,0 +1,17 @@
+<div class="usercard-additional-controls">
+    <DButton
+        class="btn-primary user-card-button"
+        @action={{this.showUserActivity}}
+        @icon="mistflux-chat"
+        @label="user.view_activity"
+    />
+
+    {{#if user.custom_fields.profile_url}}
+        <DButton
+            class="btn-primary user-card-button"
+            @action={{this.showProfile}}
+            @icon="user"
+            @label="user.view_profile"
+        />
+    {{/if}}
+</div>
