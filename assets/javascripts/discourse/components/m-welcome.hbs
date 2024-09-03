@@ -1,0 +1,18 @@
+<header class="m-welcome {{@welcome-location}}">
+    {{#if this.viewingHomepage}}
+        <div class="m-welcome-banner-wrap">
+            <DSection @bodyClass="mistflux-homepage" class="m-welcome-banner">
+                <div
+                        class="m-welcome-banner-contents wrap
+              {{unless this.welcomeText 'no-welcome-text'}}"
+                >
+                    <div class="game-logo"></div>
+
+                    {{#if this.welcomeText}}
+                        <h1>{{this.welcomeText}}</h1>
+                    {{/if}}
+                </div>
+            </DSection>
+        </div>
+    {{/if}}
+</header>
