@@ -1,0 +1,9 @@
+<div class="m-categories-columned">
+    {{#each this.columnedCategories as |c|}}
+        {{#if this.displayMobileSubcategories}}
+            <MMobileSubcategories @category={{c}} />
+        {{else}}
+            <MCategory @category={{c}} />
+        {{/if}}
+    {{/each}}
+</div>
