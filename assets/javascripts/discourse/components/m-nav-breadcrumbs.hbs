@@ -1,0 +1,24 @@
+<div class="m-breadcrumbs">
+    <a href={{this.homeUrl}} class="m-breadcrumb m-breadcrumb-home">
+        {{d-icon "mistflux-home"}}
+        {{i18n "mistflux.forums"}}
+    </a>
+    {{#if this.category}}
+        {{#if this.category.parentCategory}}
+            <a href={{this.parentCategoryUrl}} class="m-breadcrumb m-breadcrumb-category">
+                {{d-icon "mistflux-chevron_right"}}
+                {{this.category.parentCategory.name}}
+            </a>
+        {{/if}}
+        <a href={{this.categoryUrl}} class="m-breadcrumb m-breadcrumb-category">
+            {{d-icon "mistflux-chevron_right"}}
+            {{this.category.name}}
+        </a>
+    {{/if}}
+    {{#if this.topicTitle}}
+        <a href={{this.topicUrl}} class="m-breadcrumb m-breadcrumb-topic">
+            {{d-icon "mistflux-chevron_right"}}
+            {{html.safe this.topicTitle}}
+        </a>
+    {{/if}}
+</div>
