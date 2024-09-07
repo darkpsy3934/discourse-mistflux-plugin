@@ -1,9 +1,9 @@
 <td class="creator">
-    <a href="{{get "context.topic.creator.path"}}" data-user-card="{{get "context.topic.creator.username"}}">
+    <a href="{{get "topic.creator.path"}}" data-user-card="{{get "topic.creator.username"}}">
         {{#if context.topic.creator.name}}
-            {{get "context.topic.creator.name"}}
+            {{get "topic.creator.name"}}
         {{else}}
-            {{format-username "context.topic.creator.username"}}
+            {{format-username "topic.creator.username"}}
         {{/if}}
     </a>
 </td>
